@@ -7,7 +7,7 @@ from time import sleep
 from bs4 import BeautifulSoup
 import pandas as pd
 import csv
-
+#istediğiniz filtrelemeleri yaptıktan sonra gelene birinci sayfanın linki url kısmına kopylayın
 url = "https://www.lcwaikiki.com/tr-TR/TR/arama?q=sweat&LastFilter=m_1007&m_1007=39597,31870,37339,30816,37812,32027,37342,30817,31696,30611,32220,37291,37473,30989&PageIndex="
 uruncount = 0
 all_links = []
@@ -16,6 +16,7 @@ bedenurunlist=[]
 urunlist = {}
 fotolist = [] 
 l = 0  
+#range sayfa sayısının 1 fazlası olmalı
 for i in range (1,51):
   
     driver.get(url+str(i))
